@@ -34,12 +34,22 @@ const SearchResult = () => {
     }
   };
 
+  const redirectToDetailedPage = (ownerName, repoName) => {
+    if (!ownerName || !repoName) return;
+    window.location.href = `/detail/${ownerName}/${repoName}`;
+  };
+
   return (
     <>
       <div className="result-container">
         {results.map((item, key) => (
           <>
-            <div key={key}>
+            <div
+              key={key}
+              onClick={() =>
+                redirectToDetailedPage(item.owner?.login, item.name)
+              }
+            >
               <p>{item.name}</p>
               <p>{item.description}</p>
               <p>{item.owner?.login}</p>

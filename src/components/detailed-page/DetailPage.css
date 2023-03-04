@@ -1,0 +1,30 @@
+.detail-title {
+  font-size: 32px;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.detail {
+  text-align: center;
+}
+
+.detail-container {
+  text-align: left;
+  padding: 35px;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.detail-container-key {
+  font-weight: 800;
+}
+
+@media (max-width: 672px) {
+  .detail-container {
+    width: 80%;
+    padding: 20px;
+  }
+}
