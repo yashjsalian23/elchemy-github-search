@@ -20,18 +20,23 @@ const SearchResult = () => {
     setPage(page ? page : 1);
 
     setIsLoading(true);
-    getResults(query, page ? page : 1);
+    getResults(query ? query : "", page ? page : 1);
   }, []);
 
   const getResults = async (query, page) => {
-    let response = await axios.get(
-      `https://api.github.com/search/repositories?q=${query}&per_page=10&page=${page}`
-    );
-    setIsLoading(false);
-    if (response && response.data.items && response.data.items.length) {
-      setResults(response.data.items);
-      setTotalCount(response.data.total_count);
+    if (query && query.length) {
+      let response = await axios.get(
+        `https://api.github.com/search/repositories?q=${query}&per_page=10&page=${page}`
+      );
+      setIsLoading(false);
+      if (response && response.data.items && response.data.items.length) {
+        setResults(response.data.items);
+        setTotalCount(response.data.total_count);
+      } else {
+        setResults([]);
+      }
     } else {
+      setIsLoading(false);
       setResults([]);
     }
   };
@@ -76,7 +81,11 @@ const SearchResult = () => {
 
   return (
     <>
-      <p className="result-title">Results for {searchQuery}</p>
+      {searchQuery && searchQuery.length ? (
+        <p className="result-title">Results for {searchQuery}</p>
+      ) : (
+        <></>
+      )}
       {results && results.length ? (
         <>
           <div className="result-pagination">
@@ -151,7 +160,8 @@ const SearchResult = () => {
             <Loader />
           ) : (
             <p className="not-available-placeholder">
-              Results not available for your query: {searchQuery}
+              Results not available for your query{" "}
+              {searchQuery?.length ? `:` : ``} {searchQuery}
             </p>
           )}
         </>
