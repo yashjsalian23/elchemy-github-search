@@ -35,7 +35,7 @@ Start the server
 
 View the web app here : https://phenomenal-pastelito-939a6c.netlify.app/
 
-Video Link:
+Video Link: https://www.loom.com/share/c0c2ce3f3aaf4c118676ec02c730ff77
 
 ## API Reference
 
