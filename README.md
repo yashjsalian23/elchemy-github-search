@@ -19,6 +19,12 @@ Clone the project
 
 Go to the project directory
 
+Checkout to master branch
+
+```bash
+  git checkout master
+```
+
 Install dependencies
 
 ```bash
