@@ -58,7 +58,7 @@ const HomePage = () => {
         <p className="homepage-title">Seach Anything from github</p>
         <div className="TypeAheadDropDown">
           <input
-            placeholder="Search any repository from github"
+            placeholder="Search any repository from github (Press enter to view list of all results)"
             onChange={(e) => onKeyPress(e.target.value)}
             onKeyDown={(e) => redirectToSearchPage(e)}
           />
