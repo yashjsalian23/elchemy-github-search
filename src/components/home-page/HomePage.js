@@ -9,7 +9,6 @@ const HomePage = () => {
   const [timeout, setTimeOut] = useState();
 
   const getResults = async (query) => {
-    console.log("result hit", query);
     let response = await axios.get(
       `https://api.github.com/search/repositories?q=${query}&per_page=5`
     );
@@ -20,6 +19,10 @@ const HomePage = () => {
     }
   };
 
+  /**
+   * Debouncing of 300ms
+   * @param {string} query
+   */
   const onKeyPress = (query) => {
     if (timeout) clearTimeout(timeout);
     setQuery(query);
@@ -35,6 +38,12 @@ const HomePage = () => {
     setQuery(null);
     window.location.href = `/detail/${ownerName}/${repoName}`;
   };
+
+  /**
+   * This function is called when user presses enter and redirects to listing page
+   * @param {Object} e
+   * @returns
+   */
 
   const redirectToSearchPage = (e) => {
     if (!query) return;

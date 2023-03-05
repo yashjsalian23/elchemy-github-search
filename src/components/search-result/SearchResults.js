@@ -62,6 +62,9 @@ const SearchResult = () => {
         break;
     }
     setPage(copyPageValue);
+    /**
+     * Query params added to persist pagination on re-load
+     */
     if (fetchResults) {
       const searchParams = new URLSearchParams(window.location.search);
       searchParams.set("page", copyPageValue);
