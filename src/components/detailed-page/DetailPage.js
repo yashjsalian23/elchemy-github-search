@@ -34,19 +34,17 @@ const DetailPage = () => {
           <>
             <div className="detail-container">
               <p>
-                <span className="detail-container-key">Description:</span>{" "}
+                <span className="data-key">Description:</span>{" "}
                 {repoData.description}
               </p>
               <p>
-                <span className="detail-container-key">Owner Name:</span>{" "}
-                {owner}
+                <span className="data-key">Owner Name:</span> {owner}
               </p>
               <p>
-                <span className="detail-container-key">Language:</span>{" "}
-                {repoData.language}
+                <span className="data-key">Language:</span> {repoData.language}
               </p>
               <p>
-                <span className="detail-container-key">Liscense:</span>{" "}
+                <span className="data-key">Liscense:</span>{" "}
                 {repoData.license?.name ? (
                   repoData.license?.name
                 ) : (
@@ -54,7 +52,7 @@ const DetailPage = () => {
                 )}
               </p>
               <p>
-                <span className="detail-container-key">Forks:</span>{" "}
+                <span className="data-key">Forks:</span>{" "}
                 {repoData.forks ? (
                   repoData.forks
                 ) : (
@@ -62,11 +60,11 @@ const DetailPage = () => {
                 )}
               </p>
               <p>
-                <span className="detail-container-key">Watchers:</span>{" "}
+                <span className="data-key">Watchers:</span>{" "}
                 {repoData.watchers ? repoData.watchers : 0}
               </p>
               <p>
-                <span className="detail-container-key">Organization URL:</span>{" "}
+                <span className="data-key">Organization URL:</span>{" "}
                 {repoData.owner?.organizations_url ? (
                   <a
                     href={repoData.owner?.organizations_url}
@@ -80,7 +78,7 @@ const DetailPage = () => {
                 )}
               </p>
               <p>
-                <span className="detail-container-key">Created On:</span>{" "}
+                <span className="data-key">Created On:</span>{" "}
                 {repoData.created_at ? (
                   repoData.created_at
                 ) : (

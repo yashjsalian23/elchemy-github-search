@@ -72,7 +72,7 @@ const HomePage = () => {
                   }
                 >
                   <span>
-                    <span className="homepage-container-key">Repository:</span>{" "}
+                    <span className="data-key">Repository:</span>{" "}
                     {item.name ? (
                       item.name
                     ) : (
@@ -81,7 +81,7 @@ const HomePage = () => {
                   </span>
                   <br />
                   <span>
-                    <span className="homepage-container-key">Description:</span>{" "}
+                    <span className="data-key">Description:</span>{" "}
                     {item.description ? (
                       item.description
                     ) : (
@@ -90,7 +90,7 @@ const HomePage = () => {
                   </span>
                   <br />
                   <span>
-                    <span className="homepage-container-key">Owner:</span>{" "}
+                    <span className="data-key">Owner:</span>{" "}
                     {item.owner?.login ? (
                       item.owner?.login
                     ) : (

@@ -100,7 +100,7 @@ const SearchResult = () => {
                   style={{ cursor: "pointer" }}
                 >
                   <p>
-                    <span className="detail-container-key">Name:</span>{" "}
+                    <span className="data-key">Name:</span>{" "}
                     {item.name ? (
                       item.name
                     ) : (
@@ -108,7 +108,7 @@ const SearchResult = () => {
                     )}
                   </p>
                   <p>
-                    <span className="detail-container-key">Description:</span>{" "}
+                    <span className="data-key">Description:</span>{" "}
                     {item.description ? (
                       item.description
                     ) : (
@@ -116,7 +116,7 @@ const SearchResult = () => {
                     )}
                   </p>
                   <p>
-                    <span className="detail-container-key">Owner:</span>{" "}
+                    <span className="data-key">Owner:</span>{" "}
                     {item.owner?.login ? (
                       item.owner?.login
                     ) : (
@@ -124,7 +124,7 @@ const SearchResult = () => {
                     )}
                   </p>
                   <p>
-                    <span className="detail-container-key">Language:</span>{" "}
+                    <span className="data-key">Language:</span>{" "}
                     {item.language ? (
                       item.language
                     ) : (
@@ -132,7 +132,7 @@ const SearchResult = () => {
                     )}
                   </p>
                   <p>
-                    <span className="detail-container-key">Created On:</span>{" "}
+                    <span className="data-key">Created On:</span>{" "}
                     {item.created_at ? (
                       item.created_at
                     ) : (
