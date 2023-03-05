@@ -15,3 +15,13 @@ code {
   color: #969696;
   font-style: italic;
 }
+
+.homepage-container-key {
+  font-weight: 800;
+}
+
+.not-available-placeholder {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+}

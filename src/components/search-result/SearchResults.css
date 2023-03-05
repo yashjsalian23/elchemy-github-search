@@ -1,3 +1,36 @@
 .result-container {
   padding: 25px;
+  border: 1px solid black;
+  border-radius: 15px;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.result-title {
+  font-size: 32px;
+  font-weight: 800;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.result-pagination {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.result-pagination span {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.result-search {
+  text-align: center;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.result-search a {
+  color: inherit;
+  text-decoration: none;
 }

@@ -19,7 +19,6 @@ const DetailPage = () => {
       `https://api.github.com/repos/${owner}/${repo}`
     );
     if (response.data) {
-      console.log(response.data);
       setRepoData(response.data);
     }
   };
@@ -28,6 +27,9 @@ const DetailPage = () => {
     <>
       <div className="detail">
         <p className="detail-title">{repo}</p>
+        <div className="result-search">
+          <a href="/">Back to search </a>
+        </div>
         {repoData ? (
           <>
             <div className="detail-container">
